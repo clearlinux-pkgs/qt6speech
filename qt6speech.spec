@@ -6,10 +6,10 @@
 # autospec commit: c02b2fe
 #
 Name     : qt6speech
-Version  : 6.6.2
-Release  : 12
-URL      : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtspeech-everywhere-src-6.6.2.tar.xz
-Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtspeech-everywhere-src-6.6.2.tar.xz
+Version  : 6.6.3
+Release  : 13
+URL      : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtspeech-everywhere-src-6.6.3.tar.xz
+Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtspeech-everywhere-src-6.6.3.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-3.0
@@ -17,7 +17,6 @@ Requires: qt6speech-lib = %{version}-%{release}
 Requires: qt6speech-license = %{version}-%{release}
 BuildRequires : alsa-lib-dev
 BuildRequires : buildreq-cmake
-BuildRequires : mesa-dev
 BuildRequires : pkg-config
 BuildRequires : qt6base-dev
 BuildRequires : qt6declarative-dev
@@ -58,15 +57,15 @@ license components for the qt6speech package.
 
 
 %prep
-%setup -q -n qtspeech-everywhere-src-6.6.2
-cd %{_builddir}/qtspeech-everywhere-src-6.6.2
+%setup -q -n qtspeech-everywhere-src-6.6.3
+cd %{_builddir}/qtspeech-everywhere-src-6.6.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711166730
+export SOURCE_DATE_EPOCH=1711487818
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -127,7 +126,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711166730
+export SOURCE_DATE_EPOCH=1711487818
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6speech
 cp %{_builddir}/qtspeech-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6speech/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -151,9 +150,9 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/QtTextToSpeech/6.6.2/QtTextToSpeech/private/qtexttospeech_p.h
-/usr/include/QtTextToSpeech/6.6.2/QtTextToSpeech/private/qttexttospeech-config_p.h
-/usr/include/QtTextToSpeech/6.6.2/QtTextToSpeech/private/qvoice_p.h
+/usr/include/QtTextToSpeech/6.6.3/QtTextToSpeech/private/qtexttospeech_p.h
+/usr/include/QtTextToSpeech/6.6.3/QtTextToSpeech/private/qttexttospeech-config_p.h
+/usr/include/QtTextToSpeech/6.6.3/QtTextToSpeech/private/qvoice_p.h
 /usr/include/QtTextToSpeech/QTextToSpeech
 /usr/include/QtTextToSpeech/QTextToSpeechEngine
 /usr/include/QtTextToSpeech/QTextToSpeechPlugin
@@ -200,11 +199,11 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libQt6TextToSpeech.so.6.6.2
+/V3/usr/lib64/libQt6TextToSpeech.so.6.6.3
 /V3/usr/lib64/qt6/plugins/texttospeech/libqtexttospeech_mock.so
 /V3/usr/lib64/qt6/qml/QtTextToSpeech/libtexttospeechqmlplugin.so
 /usr/lib64/libQt6TextToSpeech.so.6
-/usr/lib64/libQt6TextToSpeech.so.6.6.2
+/usr/lib64/libQt6TextToSpeech.so.6.6.3
 /usr/lib64/qt6/metatypes/qt6texttospeech_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/modules/TextToSpeech.json
 /usr/lib64/qt6/plugins/texttospeech/libqtexttospeech_mock.so
