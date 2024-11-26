@@ -1,5 +1,5 @@
 libQt6TextToSpeech.so.6:NonQt
-libQt6TextToSpeech.so.6:QExplicitlySharedDataPointer<QVoicePrivate>::~QExplicitlySharedDataPointer()@@Qt_6_PRIVATE_API
+libQt6TextToSpeech.so.6:QExplicitlySharedDataPointer<QVoicePrivate>::~QExplicitlySharedDataPointer()@@Qt_6
 libQt6TextToSpeech.so.6:QTextToSpeech::QTextToSpeech(QObject*)@@Qt_6
 libQt6TextToSpeech.so.6:QTextToSpeech::availableEngines()@@Qt_6
 libQt6TextToSpeech.so.6:QTextToSpeech::pause(QTextToSpeech::BoundaryHint)@@Qt_6
